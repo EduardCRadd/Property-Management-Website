@@ -1,0 +1,156 @@
+
+.horizontal {
+  overflow-x: auto;
+  position: relative;
+
+  &__heading {
+    font-size: 5rem;
+    font-weight: 100;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 4rem;
+      padding-left: 1.7rem;
+    }
+  }
+
+  &__subheading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 45%;
+    left: 5.5%;
+
+    @media only screen and (max-width: $breakpoint-large) {
+      left: 8%;
+    }
+    @media only screen and (max-width: $breakpoint-medium) {
+      left: 11%;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      left: 11%;
+      letter-spacing: .7rem;
+    }
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  // max-width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+.trigger {
+  position: absolute;
+
+  &--one {
+    left: 0;
+  }
+}
+
+.scene {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &--active {
+    position: fixed;
+  }
+
+  &--ended {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
+}
+
+.horizontal-scroll-section {
+  $root: &;
+  position: relative;
+  min-height: 100vh;
+  opacity: 0;
+
+  &:first-child {
+      margin-left: 5rem;
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  img {
+    display: block;
+    max-height: 80%;
+    width: auto;
+    border: 2.5rem solid white;
+    box-shadow: 0 1rem 2rem .2rem rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: $breakpoint-small) {
+      border: 1rem solid white;
+    }
+  }
+
+  &--init {
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    &-wrapper {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      position: relative;
+    }
+
+    &-section {
+      position: relative;
+      min-width: 70vw;
+      text-align: center;
+      padding: 0 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-right: -3rem;
+
+      &:nth-child(2) {
+        min-width: 40vw;
+      }
+
+      @media only screen and (max-width: $breakpoint-small) {
+        min-width: 100vw;
+        padding: 0 20px;
+
+        &:nth-child(2) {
+            min-width: 80vw;
+            margin-right: 5rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image--two {
+    img {
+      max-height: 80%;
+      width: auto;
+    }
+  }
+}
+

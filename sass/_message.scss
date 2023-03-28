@@ -1,0 +1,64 @@
+
+.message {
+  background-color: #151515;
+  padding: 5rem 8rem 5rem 8rem;
+  display: flex;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: 5rem 2.5rem 5rem 2.5rem;
+    flex-direction: column;
+  }
+  
+  &__header-box {
+    flex: 0 0 50%;
+  }
+  &__header {
+    font-size: 4rem;
+    font-weight: 100;
+    color: #fff;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      margin-bottom: 5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__content {
+    font-weight: 300;
+    font-size: 1.7rem;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 3.5rem;
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 1.9rem;
+      line-height: 2.5rem;
+    }
+  }
+  &__btn {
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(1);
+      height: 2.5px;
+      bottom: -.7rem;
+      left: 0;
+      background-color: #fff;
+      transform-origin: bottom left;
+      transition: transform .3s ease-out;
+    }
+    
+    &:hover::after {
+      transform: scaleX(0);
+      transform-origin: bottom left;
+    }
+  }
+}

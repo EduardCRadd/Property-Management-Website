@@ -1,0 +1,127 @@
+
+.header {
+  height: 100vh;
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+
+  &__video-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2rem solid var(--color-background);
+    z-index: -1;
+
+    &--content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      border: 1rem solid var(--color-background);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
+
+    &-square {
+      background-color: #151515;
+      margin-right: -3rem;
+      margin-right: 5rem;
+      height: 7rem;
+      width: 3.5rem;
+      display: absolute;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        height: 5.5rem;
+        width: 2rem;
+      }
+    }
+    &-btnMenu {
+      margin-right: auto;
+      border: 5px solid white;
+      
+      @media only screen and (max-width: $breakpoint-small) {
+        margin-left: -3rem;
+        border: 4px solid white;
+      }
+    }
+    &-btnA {
+      font-size: 5rem;
+      color: #fff;
+      text-decoration: none;
+      font-family: inherit;
+      padding: 3rem;
+      
+      @media only screen and (max-width: $breakpoint-small) {
+        font-size: 4rem;
+      }
+    }
+    &-logo {
+      background-color: #151515;
+      padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+      }
+    }
+  }
+
+  &__logo {
+    height: 5rem;
+    width: auto;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      height: 2.5rem;
+    }
+  }
+
+
+
+  &__text-box {
+    margin-left: 10rem;
+    margin-top: 55rem;
+  }
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+
+    @media only screen and (max-width: $breakpoint-small) {
+        font-size: 2.5rem;
+        margin-left: -6rem;
+        letter-spacing: .7rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 1rem;
+      margin-left: -6rem;
+      letter-spacing: .7rem;
+    }
+  }
+}

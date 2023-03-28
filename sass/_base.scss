@@ -1,0 +1,59 @@
+
+:root {
+  --color-text-dark: #111111;
+  --color-text-light: #e2e2e2;
+  --color-text-light-1: #CBCBCB;
+
+  --color-background: #F4F3F4;
+}
+
+
+// BREAKPOINTS.
+$breakpoint-large: 87.5em;    // 1400px
+$breakpoint-medium: 68.75em;   //1100px
+$breakpoint-small: 28.125em;   // 450px
+
+// 428px iphone max 
+// 1024px ipad portrait 
+// 1360px ipad landscape
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $breakpoint-large) {
+    font-size: 50%;    // 8px
+  }
+  @media only screen and (max-width: $breakpoint-medium) {
+    font-size: 37.5%;   // 6px
+  }
+}
+
+body {
+  font-family: 'Didot', serif;
+  background-color: var(--color-background);
+  // overflow: hidden;
+  // overflow-y: scroll;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}

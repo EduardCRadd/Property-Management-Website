@@ -1,0 +1,135 @@
+
+.services {
+  padding: 10rem;
+  background-color: var(--color-background);
+
+  @media only screen and (max-width: $breakpoint-large) {
+    padding: 8rem;
+  }
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 6rem;
+  }
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: .5rem;
+  }
+
+  &__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-text-light-1);
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding-top: 7rem;
+    }
+  }
+
+  &__heading {
+    color: var(--color-text-dark);
+    font-size: 7rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    word-spacing: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+
+    & span {
+      font-size: 6rem;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        font-size: 3rem;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 4.5rem;
+      letter-spacing: .4rem;
+      word-spacing: .1rem;
+    }
+  }
+
+
+  &__service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      padding-top: 7rem;
+    }
+
+    &-textbox {
+      padding: 0 10rem;
+      flex: 0 0 50%;
+      position: relative;
+      transition: all .5s;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        padding: 0 2rem 7rem 2rem;
+        flex: 0 0 90%;
+      }
+
+      & span {
+        font-size: 2.5rem;
+        color: var(--color-text-light-1);
+        
+        position: absolute;
+        top: 2.1rem;
+        left: 2.5rem;
+        transition: all .2s;
+
+        @media only screen and (max-width: $breakpoint-small) {
+          top: 1.1rem;
+          left: -1.7rem;
+        }
+
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    &-title {
+      color: var(--color-text-dark);
+      font-size: 5rem;
+      font-weight: 400;
+      letter-spacing: .4rem;
+      margin-bottom: 5rem;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        margin-bottom: 2rem;
+        font-size: 4.5rem;
+      }
+    }
+
+    &-description {
+      color: var(--color-text-dark);
+      font-size: 2rem;
+      line-height: 3.5rem;
+      letter-spacing: .2rem;
+    }
+
+    &-photobox {
+      padding: 10rem;
+      transition: all .2s;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        display: none;
+      }
+    }
+
+    &-photo {
+      width: 100%;
+      border-radius: 1px;
+      border: 2.5rem solid white;
+      box-shadow: 0 1rem 2rem .2rem rgba(0, 0, 0, 0.2);
+
+      // @media only screen and (max-width: $breakpoint-small) {
+      //   border: 1.5rem solid white;
+      //   width: 90%;
+      // }
+    }
+  }
+}
+

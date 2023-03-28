@@ -1,0 +1,133 @@
+
+.developments {
+  padding: 10rem 0;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: 15rem 0 7rem 0;
+  }
+
+  &__header-box {
+    margin-bottom: 10rem;
+    padding-left: 8rem;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding-left: 3rem;
+    }
+  }
+  &__header-status {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: $breakpoint-large) {
+      margin-left: .6rem;
+    }
+  }
+  &__header-title {
+    font-size: 6rem;
+    // font-weight: 100;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 5.5rem;
+    }
+  }
+
+  &__photos-box {
+    display: flex;
+  }
+  &__photo-box {
+    flex: 0 0 16.666667%;
+    position: relative;
+    transition: all .5s ease;
+
+    &:nth-of-type(even) {
+      transform: translateY(-3rem);
+    }
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 99.5%;
+      background-color: rgba(0,0,0, 0.5);
+    }
+    & span {
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 99.5%;
+      padding-top: 85%;
+      padding-left: .7rem;
+      padding-right: .7rem;
+      text-align: center;
+      opacity: 0;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      flex: 0 0 25%;
+
+      &:nth-child(6) {
+        display: none;
+      }
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+  &__photo {
+    width: 100%;
+    height: auto;
+  }
+
+
+  &__btn-box {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+
+  }
+  &__btn {
+    font-size: 3rem;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+
+    & span {
+      margin-left: 3px;
+      transition: all .5s;
+    }
+    &:hover span {
+      margin-left: 1rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(1);
+        height: 3px;
+        bottom: -.7rem;
+        left: 0;
+        opacity: .7;
+        background-color: black;
+        transform-origin: bottom left;
+        transition: transform .3s ease-out;
+      }
+    
+      &:hover::after {
+        transform: scaleX(0);
+        transform-origin: bottom left;
+      }
+  }
+}
