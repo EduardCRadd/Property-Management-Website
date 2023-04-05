@@ -2,10 +2,6 @@
 .developments {
   padding: 10rem 0;
 
-  @media only screen and (max-width: $breakpoint-small) {
-    padding: 15rem 0 7rem 0;
-  }
-
   &__header-box {
     margin-bottom: 10rem;
     padding-left: 8rem;

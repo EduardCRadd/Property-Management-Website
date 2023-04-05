@@ -18,6 +18,11 @@ $breakpoint-small: 28.125em;   // 450px
 // 1360px ipad landscape
 
 
+// @font-face {
+//   font-family: 'Didott';
+//   src: url('/fonts/Didot.ttf') format('truetype');
+// }
+
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +50,7 @@ html {
 body {
   font-family: 'Didot', serif;
   background-color: var(--color-background);
-  // overflow: hidden;
+  // overflow-x: hidden;
   // overflow-y: scroll;
 }
 

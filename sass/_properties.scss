@@ -4,9 +4,12 @@
   padding: 10rem 0 3.5rem 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   @media only screen and (max-width: $breakpoint-small) {
     padding-top: 7rem;
+    padding-bottom: 3rem;
+    overflow-x: hidden;
   }
 
   &__header-box {
@@ -135,6 +138,7 @@
     @media only screen and (max-width: $breakpoint-small) {
       flex-direction: column;
       padding-top: 7rem;
+      padding-bottom: 0;
     }
   }
 
@@ -195,12 +199,13 @@
     &-content {
       height: 100%;
       width: 100%;
-      object-fit: cover;
+      object-fit: cover; 
     }
 
     @media only screen and (max-width: $breakpoint-small) {
-      padding: 7rem 3rem 7rem 3rem;
+      padding: 7rem 3rem 0 3rem;
       right: 0;
+      position: relative;
     }
   }
 
