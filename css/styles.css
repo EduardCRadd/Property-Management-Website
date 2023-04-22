@@ -16,7 +16,9 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 52%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
   @media only screen and (max-width: 87.5em) {
     html {
       font-size: 50%; } }
